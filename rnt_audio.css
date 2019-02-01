@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 8
+   Case Problem 4
+
+   Roads Not Taken Audio Styles
+   Author: Patrick M. Capuano
+   Date:   2.1.19
+
+   Filename: rnt_audio.css
+
+*/
+
+/* Audio Styles */
+
+/* Within our audio styles, the audio players are adjusted to be displayed as block elements with a box shadow that consists of the color "darkgray" with both directional offsets being of eight pixels with a blur of fiftheen pixels. The side margins are then made to be twenty pixels long, but the vertical ones are automatic with the inheritance of the surrounding content, that is also being defined to be a width of forty percent. Finally, as a bit of a stylistic choice to compensate for the outdated book rules, I made the border radius to be thirty pixels long to work much better with the curved look that audio players are given by default by Google Chrome in this current time in 2019.  */
+
+audio {
+    display: block;
+    box-shadow: darkgray 8px 8px 15px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 30px;
+}
+
+/* The webKit specified here supports many selectors to certain parts of the audio player that includes the control panel, control button, and forward and rewind buttons. As such by selecting this alongside the audio elements, we can apply the style rule to all of those contents, in this context turning their background color into the RGB value specified of dark blue. */
+
+audio::-webkit-media-controls-panel {
+    background-color: rgb(128, 128, 255);
+}
